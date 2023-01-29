@@ -55,11 +55,43 @@ img{
     flex-grow: 1;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
+.wall{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/wallbrick.jpg");
+    background-size: contain;
+}
+
+.rom{
+    display: flex;
+    border: 20px ridge rgb(165, 91, 42);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
+    background-image: url("https://cdn.home-designing.com/wp-content/uploads/2019/04/living-room-pendant-light.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.rom:hover .tabaqa-left{
+    transform: perspective(2000px) rotateY(-125deg);
+}
+
+.rom:hover .tabaqa-right{
+    transform: perspective(2000px) rotateY(125deg);
+}
+
+.tabaqa{
+    width: 200px;
+    height: 500px;
+    border: 20px ridge rgb(165, 91, 42);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s ease;
+}
+
+.tabaqa-left{
+    transform-origin: left center;
+}
+
+.tabaqa-right{
+    transform-origin: right center;
 }
